@@ -38,6 +38,7 @@ def ModelLearning(X, y):
         sizes, train_scores, test_scores = curves.learning_curve(regressor, X, y, \
             cv = cv, train_sizes = train_sizes, scoring = 'r2')
         
+        
         # Find the mean and standard deviation for smoothing
         train_std = np.std(train_scores, axis = 1)
         train_mean = np.mean(train_scores, axis = 1)
